@@ -67,7 +67,7 @@ function playGame(playRound) {
         }
     }
         //print human wins the game if humanscore is 3
-    if (humanScore === 3) {
+    if (humanScore >= 3) {
         console.log("Human is the game winner!");
 
         //print computer wins the game otherwise
