@@ -41,17 +41,17 @@ function playGame(playRound) {
         //human uses rock. computer uses paper. human lose
         if (humanChoice === 1 && computerChoice === 2) {
             computerScore++;
-            console.log("Computer Wins!");
+            console.log("Computer Wins the round!");
     
             // human uses paper. computer uses scissors. human lose
         } else if (humanChoice === 2 && computerChoice === 3) {
             computerScore++;
-            console.log("Computer Wins!");
+            console.log("Computer Wins the round!");
     
             // human uses scissors. computer uses rock. human loose.
         } else if (humanChoice === 3 && computerChoice === 1) {
             computerScore++;
-            console.log("Computer Wins!");
+            console.log("Computer Wins the round!");
     
             // human and computer uses the same weapon. tie
         } else if ((humanChoice === 1 && computerChoice === 1)  ||
@@ -62,9 +62,17 @@ function playGame(playRound) {
                 i--;
             //human win
         } else {
-            console.log("Human Wins!");
+            console.log("Human Wins the round!");
             humanScore++;
         }
+    }
+        //print human wins the game if humanscore is 3
+    if (humanScore === 3) {
+        console.log("Human is the game winner!");
+
+        //print computer wins the game otherwise
+    } else {
+        console.log("Computer is the game winner!");
     }
 
 }
